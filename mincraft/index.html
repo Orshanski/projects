@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Minecraft</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>2D Minecraft</h1>
+        </header>
+        <main>
+            <section id="world" class="world">
+                <!-- Мир игры будет сгенерирован здесь -->
+            </section>
+            <aside id="tools" class="tools">
+                <h2>Инструменты</h2>
+                <button class="tool" id="axe">Топор</button>
+                <button class="tool" id="pickaxe">Кирка</button>
+                <button class="tool" id="shovel">Лопата</button>
+            </aside>
+            <aside id="inventory" class="inventory">
+                <h2>Инвентарь</h2>
+                <div class="inventory-items"></div> <!-- Контейнер для тайлов в инвентаре -->
+            </aside>
+            
+        </main>
+        <footer>
+            <button id="reset">Сбросить мир</button>
+        </footer>
+    </div>
+    <script type="module" src="scripts/game.js"></script>
+    <script type="module" src="scripts/inventory.js"></script>
+    <script src="scripts/tools.js"></script>
+</body>
+</html>
+x

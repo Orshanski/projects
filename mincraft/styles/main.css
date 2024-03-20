@@ -1,0 +1,91 @@
+/* Базовые стили */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    margin: 20px 0;
+}
+
+/* Стили мира игры */
+.world {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* Примерная сетка, настраивается под размер мира */
+    gap: 1px;
+}
+/* Стили инструментов */
+.tools {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.tool {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Стили кнопки сброса */
+#reset {
+    margin: 20px 0;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Стили тайлов мира */
+.tile {
+    width: 50px; /* Примерный размер тайла */
+    height: 50px;
+    border: 1px solid #ccc; /* Граница для наглядности */
+    display: inline-block; /* Для выравнивания в ряд */
+    background-size: cover; /* Чтобы изображение тайла покрывало весь элемент */
+}
+
+/* Конкретные стили для разных типов тайлов */
+.tile.grass { background-image: url('assets/images/tiles/grass.png'); }
+.tile.tree { background-image: url('assets/images/tiles/tree.png'); }
+.tile.rock { background-image: url('assets/images/tiles/rock.png'); }
+.tile.dirt { background-image: url('assets/images/tiles/dirt.png'); }
+
+/* Стили тайлов инвентаря */
+.inventory-tile {
+    width: 40px; /* Меньший размер для инвентаря */
+    height: 40px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    background-size: cover;
+}
+
+.inventory {
+    border: 2px solid #767676; /* Граница вокруг инвентаря */
+    padding: 10px;
+    margin-top: 20px;
+    width: 220px; /* Или другой подходящий размер */
+    background-color: #f3f3f3; /* Светлый фон для контраста */
+}
+
+.inventory h2 {
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+.inventory-items {
+    min-height: 50px; /* Устанавливаем минимальную высоту, чтобы контейнер был виден даже когда он пуст */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    background-color: #e9e9e9; /* Слегка отличный фон для пустого инвентаря */
+    border: 1px dashed #ccc; /* Пунктирная граница для пустого инвентаря */
+    padding: 10px;
+}
